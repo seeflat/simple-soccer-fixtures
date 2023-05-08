@@ -5,6 +5,8 @@ name: Pull Fixtures
 on:
   schedule:
     - cron:  '0 10 * * *'
+#   push:
+#     branches: [ $default-branch ]
 
 jobs:
   build:
