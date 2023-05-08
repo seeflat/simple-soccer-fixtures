@@ -24,4 +24,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script # run main.py
-        run: python pull-fixtures.py
+        run: |
+          python pull-fixtures.py
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add fixtures.json
+          git commit -m "[Cron] Updating Fixture List"
+          git push
