@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The games I care about</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+    fetch('https://ssfa.mycompapp.com/api/auth/rpubk?_allow_anonymous=true')
+        .then(
+            function(response) {
+                if (response.status !== 200) {
+                    console.log('Looks like there was a problem. Status Code: ' + response.status);
+                    return;
+                }
+
+                // Examine the text in the response
+                response.json().then(function(data) {
+                    console.log(data);
+                });
+            }
+        )
+        .catch(function(err) {
+            console.log('Fetch Error :-S', err);
+        });
+
+</script>
+  
+  
+  
+  
+
+
+
+
+aes encryption key (32 random bytes): "tgEUeRIkbPk8eAgoWu01K5L1Lzus3HCS"
+
+rpubk = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDUHZ8wFsDjcOHD2RmPogZkDP6X\nzprlx293CW7EqiT3hQ+S7rOrIX/3PeB/rr0Tp3ScR/mHCgcF3f2RIdsmczWqJo6n\nSklHvR01LI4vnbYUAMBuMBz6oClHGse1eMfVNrHYviidwSC/GGfdxzER4NsmsdFi\nG7wmEwgMswOMupGcewIDAQAB\n"
+
+Expected output from rsa encrypt "Oz/glO928EPC9B3vHrLkoX3QeAn6AtJQJKtl9YmaVZYOIO+NGJnNOKh0/PKdc2JJBZUyy1EtMIz32mXxw6UFMhMC1t6q3gfkfJF074wReLBH7e2tTOwYyv8CqsHCBk+Ocg+jJJrUVWTOzM6hZ2vTIA0UJ5gY5H05NryfSK4eG/0="
+</body>
+</html>
+
