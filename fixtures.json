@@ -1,0 +1,131 @@
+{
+  "data": {
+    "data": [
+      {
+        "id": 75808,
+        "isBye": 0,
+        "status": 2,
+        "round": 7,
+        "roundDisplayName": "7",
+        "forfeitedTeamID": null,
+        "date": "2023-05-13",
+        "time": "08:00:00",
+        "endTime": "08:50:00",
+        "fixtureLength": 50,
+        "ageGroup": "U07",
+        "division": "G",
+        "homeTeamID": 20175,
+        "homeClubCode": "KIRR",
+        "homeTeamResult": null,
+        "homeClubLogo": "28396280-e935-11eb-bd0f-cba4f501a0bf.png",
+        "awayTeamID": 20529,
+        "awayClubCode": "GYME",
+        "awayTeamResult": null,
+        "homeTeamSheetStatus": 1,
+        "awayTeamSheetStatus": 1,
+        "awayClubLogo": "06edd340-e935-11eb-bd0f-cba4f501a0bf.png",
+        "fieldID": 697,
+        "field": "Kareela 5",
+        "venueID": 125,
+        "venue": "Kirrawee - K4 & K5",
+        "theVenue": {
+          "id": 125,
+          "title": "Kirrawee - K4 & K5",
+          "venueCode": "KIRR 1"
+        },
+        "theField": {
+          "id": 697,
+          "fieldCode": "KAREELA 5 06&7 1",
+          "name": "Kareela 5",
+          "venueTitle": "Kirrawee - K4 & K5"
+        },
+        "theAddress": {
+          "id": 61955,
+          "state": "NSW",
+          "suburb": "Kirrawee",
+          "street": "457 Princes Highway",
+          "postcode": "2232",
+          "latitude": -34.02618,
+          "longitude": 151.08463
+        },
+        "note": null,
+        "leagueTitle": "U07G",
+        "homeTeamCode": "U07G-1",
+        "awayTeamCode": "U07G-2",
+        "referee": null,
+        "assistantFirst": null,
+        "assistantSecond": null,
+        "official": null
+      },
+      {
+        "id": 77809,
+        "isBye": 0,
+        "status": 2,
+        "round": 7,
+        "roundDisplayName": "7",
+        "forfeitedTeamID": null,
+        "date": "2023-05-13",
+        "time": "09:40:00",
+        "endTime": "10:30:00",
+        "fixtureLength": 50,
+        "ageGroup": "W09",
+        "division": "E",
+        "homeTeamID": 21298,
+        "homeClubCode": "NCAR",
+        "homeTeamResult": null,
+        "homeClubLogo": "61d7dcc0-e934-11eb-bd0f-cba4f501a0bf.png",
+        "awayTeamID": 21305,
+        "awayClubCode": "GYME",
+        "awayTeamResult": null,
+        "homeTeamSheetStatus": 1,
+        "awayTeamSheetStatus": 1,
+        "awayClubLogo": "06edd340-e935-11eb-bd0f-cba4f501a0bf.png",
+        "fieldID": 841,
+        "field": "Nth Caringbah 1",
+        "venueID": 139,
+        "venue": "North Caringbah Oval",
+        "theVenue": {
+          "id": 139,
+          "title": "North Caringbah Oval",
+          "venueCode": "NCAR"
+        },
+        "theField": {
+          "id": 841,
+          "fieldCode": "NTH CBAH 08&9 2",
+          "name": "Nth Caringbah 1",
+          "venueTitle": "North Caringbah Oval"
+        },
+        "theAddress": {
+          "id": 61969,
+          "state": "NSW",
+          "suburb": "Caringbah",
+          "street": "1 Dianella Street",
+          "postcode": "2229",
+          "latitude": -34.037673,
+          "longitude": 151.12279
+        },
+        "note": null,
+        "leagueTitle": "W09E",
+        "homeTeamCode": "W09E",
+        "awayTeamCode": "W09E",
+        "referee": null,
+        "assistantFirst": null,
+        "assistantSecond": null,
+        "official": null
+      }
+    ],
+    "meta": {
+      "page": 1,
+      "take": 20,
+      "itemCount": 2,
+      "pageCount": 1
+    },
+    "currentPage": 1,
+    "total": 2
+  },
+  "msg": "succeeded",
+  "type": "success",
+  "success": true,
+  "code": 200,
+  "_isInvokeResult": true
+}
