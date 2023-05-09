@@ -24,7 +24,7 @@ jobs:
         run: |
           npm install
 
-      - name: execute py script # run main.py
+      - name: execute pull-fixtures script # run main.py
         run: |
           node pull-fixtures.mjs
           git config user.name github-actions

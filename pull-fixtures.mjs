@@ -43,7 +43,7 @@ function aesDecrypt(dataToDencrypt, aesKey) {
 const rpubk = 'TUlHZk1BMEdDU3FHU0liM0RRRUJBUVVBQTRHTkFEQ0JpUUtCZ1FEVUhaOHdGc0RqY09IRDJSbVBvZ1prRFA2WAp6cHJseDI5M0NXN0VxaVQzaFErUzdyT3JJWC8zUGVCL3JyMFRwM1NjUi9tSENnY0YzZjJSSWRzbWN6V3FKbzZuClNrbEh2UjAxTEk0dm5iWVVBTUJ1TUJ6Nm9DbEhHc2UxZU1mVk5ySFl2aWlkd1NDL0dHZmR4ekVSNE5zbXNkRmkKRzd3bUV3Z01zd09NdXBHY2V3SURBUUFCCg=='
 const publicKeyPkcs1 = "-----BEGIN PUBLIC KEY-----\n" + Buffer.from(rpubk, 'base64').toString('ascii') + "-----END PUBLIC KEY-----"
 
-const aesKey = crypto.randomBytes(32).toString('utf8');
+const aesKey = crypto.randomBytes(32).toString('ascii');
 const rsaEncryptedAesKey = rsaEncrypt(aesKey, publicKeyPkcs1);
 
 const fixtureBody = {
