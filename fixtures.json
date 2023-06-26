@@ -676,7 +676,7 @@
       {
         "id": 75863,
         "isBye": 0,
-        "status": 2,
+        "status": 5,
         "round": 13,
         "roundDisplayName": "13",
         "forfeitedTeamID": null,
@@ -732,7 +732,7 @@
       {
         "id": 77843,
         "isBye": 0,
-        "status": 2,
+        "status": 5,
         "round": 13,
         "roundDisplayName": "13",
         "forfeitedTeamID": null,
