@@ -1,6 +1,5 @@
 import axios from "axios";
 import crypto from "crypto";
-import CryptoJS from "crypto-js";
 import fs from "fs";
 
 function rsaEncrypt(dataToEncrypt, publicKey) {
@@ -15,28 +14,21 @@ function rsaEncrypt(dataToEncrypt, publicKey) {
 }
 
 function aesEncrypt(dataToEncrypt, aesKey) {
-    const key = CryptoJS.enc.Utf8.parse(aesKey)
-    const iv = CryptoJS.enc.Utf8.parse(aesKey)
-    const buffer = CryptoJS.AES.encrypt(dataToEncrypt, key, {
-        iv: iv,
-        mode: CryptoJS.mode.CBC,
-        padding: CryptoJS.pad.Pkcs7
-    }).toString();
-    return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(buffer))
+    const key = Buffer.from(aesKey, 'utf8');
+    const iv = Buffer.from(aesKey, 'utf8');
+    const cipher = crypto.createCipheriv('aes-256-cbc', key, iv);
+    let encrypted = cipher.update(dataToEncrypt, 'utf8', 'base64');
+    encrypted += cipher.final('base64');
+    return encrypted;
 }
 
-// aesDecrypt(e, t) {
-
-function aesDecrypt(dataToDencrypt, aesKey) {
-    const base64DecodedDataToDencrypt = CryptoJS.enc.Base64.parse(dataToDencrypt).toString(CryptoJS.enc.Utf8)
-    const key = CryptoJS.enc.Utf8.parse(aesKey)
-    const iv = CryptoJS.enc.Utf8.parse(aesKey)
-    const decryptedData = CryptoJS.AES.decrypt(base64DecodedDataToDencrypt, key, {
-        iv: iv,
-        mode: CryptoJS.mode.CBC,
-        padding: CryptoJS.pad.Pkcs7
-    }).toString(CryptoJS.enc.Utf8);
-    return JSON.parse(decryptedData)
+function aesDecrypt(dataToDecrypt, aesKey) {
+    const key = Buffer.from(aesKey, 'utf8');
+    const iv = Buffer.from(aesKey, 'utf8');
+    const decipher = crypto.createDecipheriv('aes-256-cbc', key, iv);
+    let decrypted = decipher.update(dataToDecrypt, 'base64', 'utf8');
+    decrypted += decipher.final('utf8');
+    return JSON.parse(decrypted);
 }
 
 // const { data: { data: rpubk } } = await axios.get('https://ssfa.mycompapp.com/api/auth/rpubk?_allow_anonymous=true');
